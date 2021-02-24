@@ -1,3 +1,3 @@
 # code_challenge
 
-there might be a problem with cors
+there might/might not be a problem with CORS under some configurations
