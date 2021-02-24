@@ -25,23 +25,16 @@ namespace back.Controllers
 
 
         [HttpPost]
-        // public ActionResult Post()
         public ActionResult Post(Premium premium)
         {
-            Console.WriteLine("paso");
             List<Check> checkers = this._checkService.GetChecks();
             double result =0;
-            Console.WriteLine(premium.DateOfBirth);
-            Console.WriteLine(premium.Age);
-            Console.WriteLine(premium.State);
-            
             foreach (Check check in checkers)
             {
                 if (check.checker(premium)==true){
                     result = check.Premium;
                     break;
                 } 
-                Console.WriteLine("");
             }
             if(result==0)
             {
