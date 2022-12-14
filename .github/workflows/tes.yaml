@@ -1,0 +1,11 @@
+name:  Test nuget
+on: [workflow_dispatch]
+jobs:
+  nuget:
+    runs-on: [linux]
+    steps:
+    - uses: actions/checkout@v3
+    - uses: nuget/setup-nuget@v1
+      with:
+        nuget-version: '5.x'
+    - run: nuget sources
